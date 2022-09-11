@@ -24,6 +24,8 @@ li{
 header{
     font-size: 14px;
     height: 20px;
+    background-color: gray;
+    color: white;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -49,6 +51,86 @@ header{
 .nav-icons{
     font-size: 22px;
 }
+
+.qty-count:hover{
+  color: #000;
+  cursor: pointer;
+}
+.cart-menu {
+  width: 300px;
+  position: absolute;
+}
+
+.fa-circle-xmark{
+  color: red;
+  margin: auto;
+  cursor: pointer;
+}
+
+.desc{
+  font-size: 14px;
+}
+
+.track{
+  position: relative;
+  background-color: rgb(177, 177, 177);
+  height: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 600px;
+}
+
+.track .step{
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 25%;
+  margin-top: -1rem;
+  text-align: center;
+  position: relative;
+}
+
+.track .step.active:before{
+  background: #FF5722
+}
+
+.track .step::before{
+  height: 7px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  top: 1rem;
+}
+
+.track .step.active .icon{
+  background: #ee5435;
+  color: #fff;
+}
+
+.track .icon{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  border-radius: 100%;
+  background: rgb(177, 177, 177);
+}
+
+.track .step.active .text{
+  font-weight: 400;
+  color: #000;
+}
+
+.track .text{
+  display: block;
+  margin-top: 7px;
+}
+
 
 .categories .form-control{
     width: 500px;
@@ -115,6 +197,13 @@ header{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    header .contact-info{
+        visibility: hidden;
+    }
+  
+    header .register-link{
+        white-space: nowrap;   
+    }
    
     .categories .form-control{
         width: 70vw;
